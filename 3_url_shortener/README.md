@@ -60,7 +60,4 @@ www.my-url-shortener.com/xDzAtCgy // Keep in mind that localhost:8000 will repla
 
 ***Add a hit counter***
 - Add a `hits` field to URL and migrate. Write a function that increments the `hit` counter when a shortened URL is visited.
-
-***Refactor***
-
-Refactor if you think you need to. (You probably do :P). What could you be done more efficiently? Is there anything from Django's built in tools you could use?
+# IRONING OUT YOUR CODE
