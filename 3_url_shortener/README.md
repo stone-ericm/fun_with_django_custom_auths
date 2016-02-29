@@ -2,24 +2,24 @@
 
 ##### Description
 
-* Have you ever used a URL shortener like [bit.ly](http://bit.ly)? Check it out and see how it works because we're going to create one ourselves.
+* Have you ever used a URL shortener like [bit.ly](http://bit.ly) or [jeff-apis](https://jeff-apis.herokuapp.com/urls/)? Check it out and see how it works because we're going to create one ourselves.
 
 ##### Objectives
 
 ***Set Up Your Django Project***
 
-- Create your virtual environment, 
+- Create your virtual environment,
 - Start a new Django project with the project name tiny_url_project
 - Create an app within your tiny_url_project called url_shortener.
 - Make all your necessary `settings.py` changes:
     -   Set up the appropriate URLs in the project and the app
-    -   Use Postgres as your DB
-    
+    -   Use Postgres as your DB - [https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/optional_postgresql_installation/index.html](https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/optional_postgresql_installation/index.html)
+
 ***DB and Models***
 
 * Create a model called Url that will have the following fields:
-	- `url`: which will hold the physical URL to our webpage. 
-	- `shortened`: This field can be either an integer or string that will be *unique* for each url. (Don't use the primary key, we don't want to expose that to the user. Be creative!)
+    - `url`: which will hold the physical URL to our webpage.
+    - `shortened`: This field can be either an integer or string that will be *unique* for each url. (Don't use the primary key, we don't want to expose that to the user. Be creative!)
 
 ***ModelForm and Views***
 
@@ -30,7 +30,7 @@
 
 ***The Shortened Url path***
 
-* We should now be at a point where we have a form that can take in any URL and save it in our database. However, that is only half of the problem! We want to be able to visit a unique route like below:  
+* We should now be at a point where we have a form that can take in any URL and save it in our database. However, that is only half of the problem! We want to be able to visit a unique route like below:
 
 ```
 www.my-url-shortener.com/xDzAtCgy // Keep in mind that localhost:8000 will replace the domain here.
@@ -40,7 +40,7 @@ www.my-url-shortener.com/xDzAtCgy // Keep in mind that localhost:8000 will repla
 
 ###### Hint:
 -   How are we going to create truly unique identifiers for each URL submitted? If we choose to identify the URL with random integers, what if we exceed the given amount specified or get the same random integer?
- 
+
 
 ***Re-direct route***
 
@@ -48,13 +48,13 @@ www.my-url-shortener.com/xDzAtCgy // Keep in mind that localhost:8000 will repla
 
 ***Linking it all together***
 
-* After a user creates a shortened url, make it so they\ are redirected to a "success" page with the new shortened URL displayed as well as the original URL.
+* After a user creates a shortened url, make it so they are redirected to a "success" page with the new shortened URL displayed as well as the original URL.
 
 ***Validations***
 
-* Validate that the input going to into Url is a valid url. 
-* Check out the Django Docs on [validators](https://docs.djangoproject.com/en/1.9/ref/validators). 
-* If it is valid, do your redirect. If it isn't valid, render the form again and give the user a message that it didn't work. *Hint: RegexValidator will deliver this message for you.*
+* Validate that the input going to into Url is a valid url.
+* Check out the Django Docs on [validators](https://docs.djangoproject.com/en/1.9/ref/validators).
+* If it is valid, do your redirect. If it isn't valid, render the form again and give the user a message that it didn't work. *
 
 ## Bonus:
 
