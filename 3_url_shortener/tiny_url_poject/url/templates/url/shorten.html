@@ -6,6 +6,8 @@
         {% csrf_token %}
             {{url_form.errors }}
 
+<!--             <input type="text" name="actual" value="https://" </input>
+ -->
             {% for field in url_form %}
                 <div class="{%if field.errors %}error{%endif%}">
                     {{field.label_tag}}{{ field }}
