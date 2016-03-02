@@ -1,0 +1,17 @@
+{% extends "url/base.html" %}
+
+{% block content %}
+
+    <h2>Welcome Page!</h2>
+
+    <div><a id="shorten" href="/url/shorten"> Shorten Link</a></div>
+
+    <div class='post'>
+        <br>
+        <p id="title">New URL: </p>
+        <a href="{{ new_link }}"> {{ new_link }}</a>
+        <br><br>
+        <p id="date"> Created at: {{ url.created_at }}</p>
+    </div>
+
+{% endblock content %}

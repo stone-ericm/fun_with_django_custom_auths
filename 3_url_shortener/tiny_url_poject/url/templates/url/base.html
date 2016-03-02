@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'url/style.css' %}" />
+
+</head>
+<body>
+
+    <h1>URL Shortener</h1>
+
+    <div class=container>
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+</body>
+</html>

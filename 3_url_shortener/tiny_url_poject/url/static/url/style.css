@@ -1,0 +1,39 @@
+body {
+	margin-left: 15px;
+}
+
+.container {
+	margin-left: 25px;
+}
+
+#shorten {
+	font-weight: bold;
+	font-size: 23px;
+}
+
+#shorten:hover {
+	color: red;
+}
+
+#title {
+	font-weight: bold;
+	margin:0;
+}
+
+#home {
+	font-size: 20px;
+	margin: 0;
+}
+
+#home:hover {
+	color: red;
+}
+
+#date {
+	font-size: 13px;
+	font-style: italic;
+}
+
+.button:hover {
+	background-color: red;
+}
