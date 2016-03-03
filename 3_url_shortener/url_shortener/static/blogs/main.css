@@ -1,0 +1,15 @@
+body{
+    font-family: 'Roboto', monospace, sans-serif;
+}
+
+.timestamp{
+    font-size: 10px;
+}
+
+.timemargin{
+	margin-bottom: 5px;
+}
+
+.menu{
+	text-align: right;
+}

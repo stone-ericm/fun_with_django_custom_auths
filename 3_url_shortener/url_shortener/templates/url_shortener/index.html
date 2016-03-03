@@ -1,0 +1,21 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transformers - Websites in Disguise</title>
+	<link rel="stylesheet" href="{% static 'url_shortener/materialize.css' %}">
+	<link rel="stylesheet" href="{% static 'url_shortener/main.css' %}">
+</head>
+<body>
+	<h1>Transform your ugly url into a mini-rl!</h1>
+	<form action="{% url 'url_shortener:index' %}" method='POST'>
+		{% csrf_token %}
+		{{ forms.as_p }}
+		<input name="submit" type="Submit">
+	</form>
+	{% if key %}
+	<p><a href="{% url 'url_shortener:url' key=key %}">{{ key }}</a></p>
+	{%endif%}
+</body>
+</html>
